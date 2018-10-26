@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+英雄信息
+{% for hero in herolist %}
+<ul>
+    <li>人物：{{ hero.hname }}</li>
+    <li>技能：{{ hero.hcomment }}</li>
+    {% if hero.hgender %}
+    <li>性别：男</li>
+        {% else %}
+        <li>性别：女</li>
+
+    {% endif %}
+
+</ul>
+<br>
+{% empty %}
+    <li>没有英雄信息</li>
+{% endfor %}
+
+</body>
+</html>
